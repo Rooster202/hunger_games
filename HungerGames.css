@@ -53,8 +53,8 @@ html {
 }
 .left h5 {
     position: relative;
-    bottom: -20%;
-    right: 10%;
+    bottom: 0px;
+    right: 10px;
     text-align: right;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;

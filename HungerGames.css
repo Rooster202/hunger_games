@@ -5,13 +5,13 @@
     src: url(../.vscode/Windlass.ttf) format('woff2');
 }
 @font-face {
-    font-family: "Windlass";
+    font-family: "Trajan Pro Bold";
     src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('truetype');
     src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('woff');
     src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('woff2');
 }
 @font-face {
-    font-family: "Windlass";
+    font-family: "Trajan Pro";
     src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('truetype');
     src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('woff');
     src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('woff2');
@@ -281,7 +281,7 @@ body h2 {
     z-index: 10;
 }
 #rules_page li {
-    list-style: lower-alpha;
+    list-style: georgian;
 }
 .welcome {
     width: 40%;

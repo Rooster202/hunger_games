@@ -144,15 +144,18 @@
 							document.getElementById("pageTitle").style.display = 'inline-block';
 							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
 						}
+					}
+					function resize2() {
 						if (window.outerWidth / screen.width < 0.4) {
 							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
 						}
 						else {
 							document.getElementById("welcome").style.width = "40%";
 						}
-					}
 					window.onresize = resize;
 					window.onload = resize;
+					window.onresize = resize2;
+					window.onload = resize2;
 					</script><script>
 					function scale () {
 						var width = window.outerWidth;

@@ -35,6 +35,7 @@
 					console.log("screen height: " + screenHeight);
 				</script>
 				<script>
+					function zooming () {
 					var zoomRatio = window.devicePixelRatio;
 					if (zoomRatio === 1.25) {
 						console.log("yes");
@@ -48,6 +49,8 @@
 						console.log("hello");
 					document.getElementById("hglogo").style.display = "none";
 					}
+					}
+					window.onresize = zooming;
 				</script>
 	</header>
 		<br>

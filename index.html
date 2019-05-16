@@ -136,16 +136,21 @@
 				</footer>
 				<script>
 					function resize() {
-						if (window.innerWidth < 1270) {
+						if (window.outerWidth < 1270) {
 							document.getElementById("pageTitle").style.display = 'none';
-							document.getElementById("pageTitleOverlay").style.display = 'none';}
+							document.getElementById("pageTitleOverlay").style.display = 'none';
+						}
 						else {
 							document.getElementById("pageTitle").style.display = 'inline-block';
-							document.getElementById("pageTitleOverlay").style.display = 'inline-block';}
+							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
+						}
 						if (window.outerWidth / screen.width < 0.4) {
-							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";}
+							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
+						}
 						else {
-							document.getElementById("welcome").style.width = "40%";}}
+							document.getElementById("welcome").style.width = "40%";
+						}
+					}
 					window.onresize = resize;
 					window.onload = resize;
 					</script><script>

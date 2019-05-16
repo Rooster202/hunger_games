@@ -155,7 +155,8 @@
 					window.onload = resize;
 					</script><script>
 					function resizing () {console.log("resize");}
-					window.onresize = resizing;
+					window.onresize = resizing();
+					window.onload = resizing();
 					/*function scale () {
 						var width = window.outerWidth;
 						var screenWidth = screen.width;

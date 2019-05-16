@@ -34,24 +34,6 @@
 					console.log("screen width: " + screenWidth);
 					console.log("screen height: " + screenHeight);
 				</script>
-				<script>
-					function zooming () {
-					var zoomRatio = window.devicePixelRatio;
-					if (zoomRatio === 1.25) {
-						console.log("yes");
-						console.log(zoomRatio);
-					}
-					else {
-						console.log("no")
-						console.log(zoomRatio);
-					}
-					if (zoomRatio >= 1.3636363636363635) {
-						console.log("hello");
-					document.getElementById("hglogo").style.display = "none";
-					}
-					}
-					window.onresize = zooming;
-				</script>
 	</header>
 		<br>
         <h1 class="w3-animate-fading pageTitle" id="pageTitle">MBBC <br>  Hunger Games</h1>
@@ -233,5 +215,23 @@
 						document.getElementsByClassName("mbbclogo").style.top *= screenHeightRatio;
 					}
 					window.onload = scale;
+				</script>
+				<script>
+					function zooming () {
+					var zoomRatio = window.devicePixelRatio;
+					if (zoomRatio === 1.25) {
+						console.log("yes");
+						console.log(zoomRatio);
+					}
+					else {
+						console.log("no")
+						console.log(zoomRatio);
+					}
+					if (zoomRatio >= 1.3636363636363635) {
+						console.log("hello");
+					document.getElementById("hglogo").style.display = "none";
+					}
+					}
+					window.onresize = zooming;
 				</script>
 </html>

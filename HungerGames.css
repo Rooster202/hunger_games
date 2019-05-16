@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "Windlass";
+    src: url(../.vscode/Windlass.ttf) format('truetype');
+    src: url(../.vscode/Windlass.ttf) format('woff');
+    src: url(../.vscode/Windlass.ttf) format('woff2');
+}
+@font-face {
+    font-family: "Windlass";
+    src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('truetype');
+    src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('woff');
+    src: url(C:/Windows/Fonts/TrajanPro-Bold.otf) format('woff2');
+}
+@font-face {
+    font-family: "Windlass";
+    src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('truetype');
+    src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('woff');
+    src: url(C:/Windows/Fonts/TrajanPro-Regular.otf) format('woff2');
+}
+html {
+    background-color:  rgba(226, 173, 75,1);
+    background-image: url("katniss_background.jpg"), /*url("katniss_background_flip.jpg"),*/ url("katniss_background_mirror.jpg") /*, url("katniss_background_flip_mirror.jpg")*/;
+    background-position: left top, left top/*, left top, left top*/;
+    background-repeat: no-repeat, /*repeat-y, repeat-x,*/ repeat-x;
+    background-size: 1500px;
+}
+
+.thisPage {
+    border-bottom: 4px solid black;
+}
+.nav {
+    position: absolute;
+    top: 850px;
+    left: 0%;
+    width: 100%;
+	display: block;
+	margin-top: 0px;
+	font-size: 20px;
+	color: Black;
+	background-color: rgba(226, 173, 75,1);
+	padding: 0px 10px;
+	margin-left: 0%;
+    height: 250px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    border-top: black solid;
+    border-width: 3px;
+}
+.nav h5 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        position: relative;
+        top: 50px;
+}
+.left h5 {
+    position: absolute;
+    bottom: -325px;
+    right: 10px;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.header {
+    background-color: rgba(190,150,150,0.7);
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: none;
+    padding: 0px 50px;
+    z-index: 100;
+    min-width: 100%;
+    overflow: hidden;
+}
+.header:hover {
+    background-color:rgba(190,150,150,1);
+}
+.container {
+    display: grid;
+    height: 100%;
+    max-height: 100%;
+    align-content: start;
+    position: absolute;
+    top: -20%;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-evenly;
+    grid-template-areas: 
+                        "home rules leaderboard account login signup";
+}
+.header li {
+    color: rgb(221, 255, 72);
+    display: inline-block;
+    padding: 0px 60px;
+    font-size: 25px;
+    font-family: "Permanent Marker", cursive;
+    overflow: hidden;
+    height: 100px;
+}
+.header li:hover {
+    color: rgba(250,0,0,0.5);
+    font-size: 28px;
+}
+.thisPage:hover{
+    border: none;
+    text-decoration: none;
+}
+.rules {
+    grid-area: rules;
+}
+.leaderboard {
+    grid-area: leaderboard;
+}
+.account {
+    grid-area: account;
+}
+.login {
+    grid-area: login;
+}
+.signup {
+    grid-area: signup;
+}
+.bold {
+	font-weight: bold;
+}
+
+.content {
+	margin-left: 1%;
+}
+
+/*.pageTitle {
+    text-align: center;
+    color: rgb(255, 94, 0);
+    font-family: 'Trajan Pro', 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 60px;
+    display: block;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+}
+.pageTitleOverlay {
+    text-align: center;
+    color: rgb(255, 196, 0);
+    font-family: 'Trajan Pro', 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 60px;
+    position: relative;
+    bottom: 80px;
+    display: block;
+    /*background-color: rgba(255,255,255,0.8);
+}*/
+.pageTitle {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: inline-block;
+    position: absolute;
+    right: -5%;
+    top: 50px;
+    color: rgb(255, 94, 0);
+    font-family: 'Trajan Pro', 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 60px;
+    z-index: 1;
+    height: 850px;
+    width: 20.5%;
+    max-width: 20.5%;
+    min-width: 13%;
+    overflow: hidden;
+}
+.pageTitleOverlay {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: inline-block;
+    position: absolute;
+    right: -5%;
+    top: 50px;
+    color: rgb(255, 196, 0);
+    font-family: 'Trajan Pro', 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 60px;
+    height: 850px;
+    width: 20.5%;
+    max-width: 20.5%;
+    min-width: 13%;
+    overflow: hidden;
+
+}
+#login_message, #sign_up_message {
+	color: red;
+}
+
+#user_home_page {
+	display: none;
+}
+
+#sign_up_page {
+	display: none;
+}
+
+.user_stat_tittle {
+	font-weight: bold;
+	/*border: 2px solid black;*/
+}
+
+
+/*
+#sign_up_b1 {
+	display = inline;
+}
+
+
+#login_form {
+	display: none;
+}
+*/
+.flash {
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 1s step-end infinite;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+#countdown {
+    font-size: 100px;
+    text-align: center;
+    display: inline-block;
+    margin: none;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 370px;
+    font-family: "Copperplate Gothic Light", "Times New Roman", serif;
+    width: 44%;
+    max-width: 44%;
+    min-width: 44%;
+    height: 120px;
+    max-height: 120px;
+    min-height: 120px;
+}
+.countdownLabel {
+    font-size: 27px;
+    text-align: center;
+    display: inline-block;
+    margin: none;
+    padding: 10px;
+    position: absolute;
+    top: 270px;
+    left: 450px;
+    overflow: hidden;
+    width: 500px;
+    height: 80px;
+    font-family: "Copperplate Gothic Light", "Times New Roman", serif;
+}
+.textbox {
+    background-color: rgba(51, 0, 0, 0.8);
+    color: white;
+    border: orange;
+    box-shadow: 0.5px 1px;
+    margin: 2px 4px;
+}
+body h2 {
+    font-family: 'Windlass', "Times New Roman", serif;
+}
+
+.hglogo {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 890px;
+    left: 45%;
+    z-index: 10;
+}
+.mbbclogo {
+    height: 100px;
+    position: absolute;
+    top: 890px;
+    right: 5%;
+    z-index: 10;
+}
+#rules_page li {
+    list-style: lower-alpha;
+}
+.welcome {
+    width: 40%;
+    overflow: hidden;
+}

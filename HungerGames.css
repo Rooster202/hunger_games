@@ -52,8 +52,8 @@ html {
         top: 50px;
 }
 .left h5 {
-    position: absolute;
-    bottom: -325px;
+    position: relative;
+    bottom: -100px;
     right: 10px;
     text-align: right;
     font-family: 'Times New Roman', Times, serif;

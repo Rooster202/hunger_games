@@ -52,6 +52,26 @@
 				<input name="login_password" placeholder="Password" required="" maxlength="20" type="password" class="textbox"><button id="show_password_b1" type="button">Show</button>
 				<p id="login_message"></p>
 				<input type="submit" value="Log-In">
+				<script>
+					function resize() {
+						if (window.outerWidth < 1270*(screen.width/864)) {
+							document.getElementById("pageTitle").style.display = 'none';
+							document.getElementById("pageTitleOverlay").style.display = 'none';
+						}
+						else {
+							document.getElementById("pageTitle").style.display = 'inline-block';
+							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
+						}
+						if (window.outerWidth / screen.width < 0.4) {
+							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
+						}
+						else {
+							document.getElementById("welcome").style.width = "40%";
+						}
+					}
+					window.onresize = resize;
+					window.onload = resize;
+					</script>
 			</form>
 			<br><br>
 			<div id="user_home_page">
@@ -135,25 +155,6 @@
 								</div>
 				</footer>
 				<script>
-					function resize() {
-						if (window.outerWidth < 1270*(screen.width/864)) {
-							document.getElementById("pageTitle").style.display = 'none';
-							document.getElementById("pageTitleOverlay").style.display = 'none';
-						}
-						else {
-							document.getElementById("pageTitle").style.display = 'inline-block';
-							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
-						}
-						if (window.outerWidth / screen.width < 0.4) {
-							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
-						}
-						else {
-							document.getElementById("welcome").style.width = "40%";
-						}
-					}
-					window.onresize = resize;
-					window.onload = resize;
-					</script><script>
 					function resizing () {console.log("resize");}
 					window.onresize = resizing();
 					window.onload = resizing();

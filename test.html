@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></head>
+<body>
+    <header class="header">
+		<title>MBBC Hunger Games</title>
+		<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+        <link type="text/css" href="HungerGames.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <ul class="container" style="text-decoration: none;">
+            <li id="home" class="thisPage"><a href="" style="text-decoration: none;">Home</a></li>
+            <li id="rules"><a href=""style="text-decoration: none;">Rules</a></li>
+            <li id="leaderboard"><a href="Leaderboard.html"style="text-decoration: none;">Leaderboard</a></li>
+            <li id="account"><a href=""style="text-decoration: none;">Account</a></li>
+            <li id="login"><a href=""style="text-decoration: none;">Login</a></li>
+            <li id="signup"><a href=""style="text-decoration: none;">Sign Up</a></li>
+                  </div>
+            </li>
+				</ul>
+				<script>
+					var screenWidth = screen.width;
+					var screenHeight = screen.height;
+					var width = window.outerWidth;
+					var height = window.outerHeight;
+					var widthRatio = width / screenWidth;
+					var heightRatio = height / screenHeight;
+					
+					console.log("width ratio: " + widthRatio);
+					console.log("height ratio: " + heightRatio);
+					var usableHeight = window.innerHeight / screen.height;
+					console.log("usable height: " + usableHeight);
+					console.log("window width: " + window.outerWidth);
+					console.log("screen width: " + screenWidth);
+					console.log("screen height: " + screenHeight);
+				</script>
+				<script>
+					var zoomRatio = window.devicePixelRatio;
+					if (zoomRatio === 1.25) {
+						console.log("yes");
+						console.log(zoomRatio);
+					}
+					else {
+						console.log("no")
+						console.log(zoomRatio);
+					}
+				</script>
+	</header>
+		<br>
+        <h1 class="w3-animate-fading pageTitle" id="pageTitle">MBBC <br>  Hunger Games</h1>
+				<h1 class="pageTitleOverlay" id="pageTitleOverlay">MBBC <br> Hunger Games</h1>
+				<h4 class="countdownLabel">Time Left Until Next Round</h4>
+        <p id="countdown"></p>
+				<script src="TimerScript.js"></script>
+		<div class="content">
+			<form id="login_form">
+				<br>
+				<p class="welcome" id="welcome">Welcome to the school-wide and web-hosted student Hunger Games for the MBBC community!</p>
+				<br>
+				<h2>Log In</h2>
+				<input name="login_name" placeholder="Name" required="" maxlength="20" class="textbox"><span>(Your first name + the first letter of surname)</span>
+				<br><br>
+				<input name="login_password" placeholder="Password" required="" maxlength="20" type="password" class="textbox"><button id="show_password_b1" type="button">Show</button>
+				<p id="login_message"></p>
+				<input type="submit" value="Log-In">
+			</form>
+			<br><br>
+			<div id="user_home_page">
+				<br>
+				<p></p>
+				<span class="user_stats"></span><br><br>
+				<button type="button" id="kill_button">I killed someone</button><button type="button" id="survived_button">I survived</button>
+			</div>
+			<div id="sign_up_for_homepage">
+				<span>Don't have an account?</span><button id="sign_up_b1" type="button">Sign up</button>
+			</div>
+			<div id="sign_up_page">
+				<u><h2>Sign-up!!</h2></u>
+				<p id="sign_up_message_before">Only MBBC students in high school can play MBBC Hunger Games. If you are a high school MBBC student, please fill out the form below. If you are a teacher or parent who wants a spectator account, email Reuben at: 20richar@mbbc.qld.edu.au</p>
+				<br><br>
+				<form id="sign_up_form">
+					<span class="bold">School Email: </span><input name="email_num" type="number" min="19" max="30" placeholder="E.g. 21" required=""><input required="" name="email_string" placeholder="E.g.Smithj"><span>@mbbc.qld.edu.au</span><br>
+					<span>[Graduation Num] + [First 5 letters of surname + First letter of first name]</span><br>
+					<br>
+					<label for="username" class="bold">Username: </label>
+					<input name="username" required="" maxlength="20"><br>
+					<span>[Your surname + the first letter of your first name]</span>
+					<br><br>
+					<label for="password" class="bold">Password: </label>
+					<input name="password" required="" maxlength="20" type="password"><button id="show_password_b2" type="button">Show</button>
+					<!--
+					<label for="first_name" class="bold">First Name:</label>
+					<input name="first_name"></input><br><br>
+					<label for="last_name" class="bold">Last Name:</label>
+					<input name="last_name"></input><br><br>
+					-->
+					<br><br><br>
+					<p id="sign_up_message"></p>
+					<input type="submit">
+				</form>
+			</div>
+			
+			<div id="rules_page">
+				<h2>Rules</h2>
+				<ol>
+					<li>Rule</li>
+					<li>Rule</li>
+					<li>Rule</li>
+					<li>Rule</li>
+					<li>Rule</li>
+					<li>Rule</li>
+				</ol>
+			</div>
+			<div id="leaderboard">
+				<h2>Leaderboard</h2>
+				<ol><li><span class="bold">LachlanH:</span> 0pts</li><li><span class="bold">test16:</span> 0pts</li>
+					<li id="rgr">RGR</li>
+				</ol>
+		</div>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyCTmZUb-Db9Gcb-wOIsyiRiqI5siJ_uDIM",
+			authDomain: "hungergames-2bdd0.firebaseapp.com",
+			databaseURL: "https://hungergames-2bdd0.firebaseio.com",
+			projectId: "hungergames-2bdd0",
+			storageBucket: "hungergames-2bdd0.appspot.com",
+			messagingSenderId: "658652918297"
+		  };
+		  firebase.initializeApp(config);
+		  const db = firebase.firestore();
+		</script>
+				<script src="./javascript/mbbc_hg.js"></script>
+			</body>
+        <footer class="nav">
+								<h5>Made by <a href="./index.html" target="_blank">Reuben Richardson</a>, Heath Gaydon, <a href="https://nebrok.github.io/" target="_blank">Korben Lyall Wilson</a> and Lachlan Hunter.</h5>
+								<h5>Styling by <a href="">Benjamin Tran.</a></h5>
+								<h5 id="copyright"></h5>
+								<script>document.getElementById("copyright").innerHTML = "Copyright 2019 by " + window.location.pathname;</script>
+								<h5>Image References: The Hunger Games [Image]. Retrieved from https://wall.alphacoders.com/big.php?i=464128.</h5>
+								<h5>Inspired by Suzanne Collin's <em>The Hunger Games</em>.</div></h5>
+								<div class="left">
+									<h5>Submit a Query to: 20richar@mbbc.qld.edu.au</h5>
+									<img class="hglogo" src="hunger-games-trilogy-books-covers copy.png">
+									<img class="mbbclogo" src="photo_4950_1364168450 copy.png">
+								</div>
+				</footer>
+				<script>
+					function resize() {
+						if (window.innerWidth < 1270) {
+							document.getElementById("pageTitle").style.display = 'none';
+							document.getElementById("pageTitleOverlay").style.display = 'none';
+						}
+						else {
+							document.getElementById("pageTitle").style.display = 'inline-block';
+							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
+						}
+						if (window.outerWidth / screen.width < 0.4) {
+							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
+						}
+						else {
+							document.getElementById("welcome").style.width = "40%";
+						}
+					}
+					window.onresize = resize;
+					window.onload = resize;
+					</script><script>
+					function scale () {
+						var width = window.outerWidth;
+						var screenWidth = screen.width;
+						var outerHeight = window.outerHeight;
+						var innerHeight = window.innerHeight;
+						var screenHeight = screen.height;
+						const myScreenWidth = 1536;
+						const myScreenHeight = 864;
+						const myWidth = 1550;
+						var screenWidthRatio = screenWidth / myScreenWidth;
+						var screenHeightRatio = screenHeight / myScreenHeight;
+						console.log("screen width ratio: " + screenWidthRatio);
+						console.log("screen height ratio: " + screenHeightRatio);
+						document.getElementsByTagName("html").style.background-size *= screenHeightRatio;
+						document.getElementsByClassName("thisPage").style.border-bottom *= screenHeightRatio;
+						document.getElementsByClassName("nav").style.top *= screenHeightRatio; 
+						document.getElementsByClassName("nav").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("nav").style.padding *= screenHeightRatio;
+						document.getElementsByClassName("nav").style.height *= screenHeightRatio;
+						document.getElementsByClassName("nav").style.border-width *= screenHeightRatio;
+						document.getElementsByClassName("nav").getElementsByTagName("h5").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("nav").getElementsByTagName("h5").style.top *= screenHeightRatio;
+						document.getElementsByClassName("left").getElementsByTagName("h5").style.bottom *= screenHeightRatio;
+						document.getElementsByClassName("left").getElementsByTagName("h5").style.right *= screenHeightRatio;
+						document.getElementsByClassName("left").getElementsByTagName("h5").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("header").style.height *= screenHeightRatio;
+						document.getElementsByClassName("header").style.max-height *= screenHeightRatio;
+						document.getElementsByClassName("header").style.min-height *= screenHeightRatio;
+						document.getElementsByClassName("header").style.padding *= screenHeightRatio;
+						document.getElementsByClassName("header").getElementsbyTagName("li").style.padding *= screenHeightRatio;
+						document.getElementsByClassName("header").getElementsbyTagName("li").style.height *= screenHeightRatio;
+						document.getElementsByClassName("header").getElementsbyTagName("li").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("header").getElementsbyTagName("li"):hover.style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("pageTitle").style.top *= screenHeightRatio;
+						document.getElementsByClassName("pageTitle").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("pageTitle").style.height *= screenHeightRatio;
+						document.getElementsByClassName("pageTitleOverlay").style.top *= screenHeightRatio;
+						document.getElementsByClassName("pageTitleOverlay").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("pageTitleOverlay").style.height *= screenHeightRatio;
+						document.getElementsByClassName("pageTitleOverlay").style.top *= screenHeightRatio;
+						document.getElementById("countdown").style.font-size *= screenHeightRatio;
+						document.getElementById("countdown").style.padding *= screenHeightRatio;
+						document.getElementById("countdown").style.top *= screenHeightRatio;
+						document.getElementById("countdown").style.left *= screenHeightRatio;
+						document.getElementById("countdown").style.height *= screenHeightRatio;
+						document.getElementById("countdown").style.max-height *= screenHeightRatio;
+						document.getElementById("countdown").style.min-height *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.font-size *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.padding *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.top *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.left *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.width *= screenHeightRatio;
+						document.getElementsByClassName("countdownLabel").style.height *= screenHeightRatio;
+						document.getElementsByClassName("textbox").style.box-shadow *= screenHeightRatio;
+						document.getElementsByClassName("textbox").style.margin *= screenHeightRatio;
+						document.getElementsByClassName("hglogo").style.height *= screenHeightRatio;
+						document.getElementsByClassName("hglogo").style.top *= screenHeightRatio;
+						document.getElementsByClassName("mbbclogo").style.height *= screenHeightRatio;
+						document.getElementsByClassName("mbbclogo").style.top *= screenHeightRatio;
+					}
+					window.onload = scale;
+				</script>
+</html>

@@ -155,7 +155,23 @@
 								</div>
 				</footer>
 				<script>
-					function resizing () {console.log("resize");}
+					function resizing() {
+						console.log("resizing");
+						if (window.outerWidth < 1270*(screen.width/864)) {
+							document.getElementById("pageTitle").style.display = 'none';
+							document.getElementById("pageTitleOverlay").style.display = 'none';
+						}
+						else {
+							document.getElementById("pageTitle").style.display = 'inline-block';
+							document.getElementById("pageTitleOverlay").style.display = 'inline-block';
+						}
+						if (window.outerWidth / screen.width < 0.4) {
+							document.getElementById("welcome").style.width = (window.innerWidth - 10) + "px";
+						}
+						else {
+							document.getElementById("welcome").style.width = "40%";
+						}
+					}
 					window.onresize = resizing();
 					window.onload = resizing();
 					/*function scale () {

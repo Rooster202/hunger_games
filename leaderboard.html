@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<title>MBBC Hunger Games</title>
+		<link type="text/css" href="./styles/mbbc_hg.css" rel="stylesheet">
+		<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+	</header>
+	
+	<body>
+		<h5 class="nav">Made by <a href="./index.html" target="_blank">Reuben Richardson</a>, Heath Gaydon, <a href="https://nebrok.github.io/" target="_blank">Korben Lyall Wilson</a> and Lachlan Hunter</h5>
+		<br>
+		<h1 class="center">Leaderboard</h1>
+		
+			<div id="leaderboard">
+				<h2></h2>
+				<ol>
+					<li id="rgr">RGR</li>
+				</ol>
+			</div>
+		</div>
+		
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyCTmZUb-Db9Gcb-wOIsyiRiqI5siJ_uDIM",
+			authDomain: "hungergames-2bdd0.firebaseapp.com",
+			databaseURL: "https://hungergames-2bdd0.firebaseio.com",
+			projectId: "hungergames-2bdd0",
+			storageBucket: "hungergames-2bdd0.appspot.com",
+			messagingSenderId: "658652918297"
+		  };
+		  firebase.initializeApp(config);
+		  const db = firebase.firestore();
+		</script>
+		<script src="./javascript/scoreboard.js"></script>
+	</body>
+</html>

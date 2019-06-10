@@ -157,7 +157,7 @@
 				let newSuffix = positionSuffix (userPlacingStr);
 				document.getElementById("list").childNodes[2].childNodes[38].childNodes[0].innerHTML = userPlacing + "<sup>" + newSuffix + "</sup>";
 				
-				document.getElementById("list").childNodes[2].childNodes[38].childNodes[2].innerHTML = nameList[userPlacing][1];
+				document.getElementById("list").childNodes[2].childNodes[38].childNodes[2].innerHTML = nameList[(userPlacing-1)][1];
 		}
 	else {console.log("i hate english too");}
 		

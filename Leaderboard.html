@@ -126,6 +126,7 @@
 	console.log(document.getElementById("list").childNodes[1]);
 	console.log(document.getElementById("list").childNodes[0]);
 	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["Rueben Richardson","-666"]];
+	let userName = "Ben Tran";
 	for (i=1; i<= 20; i++) {
 		let row = i;
 		let actualRow = 2* row - 2;
@@ -133,9 +134,9 @@
 		name.innerHTML = nameList[(i-1)][0];
 		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
 		points.innerHTML = nameList[(i-1)][1] + "pts";
+		if (nameList[(i-1)][0] == userName) {let selfName = document.getElementById("list").childNodes[2].childNodes[38]; selfName.className = "selfName";}
 	}
 	console.log("english is aids");	
-	let userName = "Rueben Richardson";
 		expandedNameList = nameList.flat();
 		console.log(expandedNameList);
 		let userPlacing = ((expandedNameList.indexOf(userName))/2) + 1;

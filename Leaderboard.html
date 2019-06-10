@@ -127,12 +127,12 @@
 	console.log(document.getElementById("list").childNodes[0]);
 	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["Rueben Richardson","-666"]];
 	for (i=0; i<= 20; i++) {
-		let row = i+1;
+		let row = i;
 		let actualRow = 2* row - 2;
 		let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
-		name.innerHTML = nameList[i][0];
+		name.innerHTML = nameList[(i-1)][0];
 		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
-		points.innerHTML = nameList[i][1] + "pts";
+		points.innerHTML = nameList[(i-1)][1] + "pts";
 	}
 	console.log("english is aids");	
 	let userName = "Rueben Richardson";

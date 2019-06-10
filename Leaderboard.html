@@ -126,8 +126,8 @@
 	console.log(document.getElementById("list").childNodes[1]);
 	console.log(document.getElementById("list").childNodes[0]);
 	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["-","0"],["Rueben Richardson","-666"]];
-	for (i=1; i<= 20; i++) {
-		let row = i;
+	for (i=0; i<= 20; i++) {
+		let row = i+1;
 		let actualRow = 2* row - 2;
 		let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
 		name.innerHTML = nameList[i][0];
@@ -158,14 +158,14 @@
 				document.getElementById("list").childNodes[2].childNodes[38].childNodes[0].innerHTML = userPlacing + "<sup>" + newSuffix + "</sup>";
 				
 				document.getElementById("list").childNodes[2].childNodes[38].childNodes[2].innerHTML = nameList[(userPlacing-1)][1] + "pts";
-				//let selfName = document.getElementById("list").childNodes[2].childNodes[38];
-				//selfName.className = "selfName";
+				let selfName = document.getElementById("list").childNodes[2].childNodes[38];
+				selfName.className = "selfName";
 		}
 	else {console.log("i hate english too");}
 		
 	
 	</script>
-<!--<style> .selfName {background-color: rgba(250,160,25,0.9);} </style>-->
+<style> .selfName {background-color: rgba(250,160,25,0.9);} </style>-->
 		<script>
 		  // Initialize Firebase
 		  var config = {

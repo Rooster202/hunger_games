@@ -114,8 +114,9 @@
 	for (i=1; i<=25; i++) {
 		let row = i;
 		let actualRow = 2*row - 2;
+		var new = i - 1;
 		let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
-		name.innerHTML = nameList[i-1];
+		name.innerHTML = nameList[new];
 	}
 	</script>
 		<script>

@@ -134,7 +134,9 @@
 		name.innerHTML = nameList[(i-1)][0];
 		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
 		points.innerHTML = nameList[(i-1)][1] + "pts";
-		if (nameList[(i-1)][0] == userName) {let selfName = document.getElementById("list").childNodes[2].childNodes[38]; selfName.className = "selfName";}
+		if (nameList[(i-1)][0] == userName) {
+			let selfName = document.getElementById("list").childNodes[2].childNodes[actualRow]; 
+			selfName.className = "selfName";}
 	}
 	console.log("english is aids");	
 		expandedNameList = nameList.flat();

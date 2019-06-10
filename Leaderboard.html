@@ -107,36 +107,17 @@
 				for (i=1; i<=25; i++) {
 					center(i);
 				}
-
-
-        /*var table = document.getElementById("list");
-        var tableChildren = table.childElementCount;
-        function scoreboard (i) {
-            let suffix;
-            var position = (i+1).toString();
-            var positionSuffix = position[position.length-1];
-            //var twoSuffix = position.slice(-2);
-            console.log(position);
-            console.log(positionSuffix);
-            //console.log(twoSuffix);
-            //if (10 < twoSuffix < 14) {suffix = "th";}
-            if (positionSuffix == 1) {suffix = "st";}
-            else if (positionSuffix == 2) {suffix = "nd";}
-            else if (positionSuffix == 3) {suffix = "rd";}
-            else {suffix = "th";}
-						console.log(suffix); 
-						var row = document.getElementById("list").childNodes[i+2].firstChild.childNodes[0];
-						console.log(row.innerHTML);
-            //console.log("row: " + row);
-            //console.log(row.innerHTML);
-            pos = i + 1;
-						row.innerHTML = pos + "<sup>" + suffix + "</sup>";
-						//console.log(row.innerHTML + " row: " + row)
-						console.log("finished");
-				}
-				//scoreboard(0);
-				//scoreboard(1);*/
+      
     </script>
+<script>
+	let nameList = ["Ben Tran", "Korben Lyall-Wilson", "Heath Gaydon","Lachlan Hunter","Nic Power","Dan Field"];
+	for (i=1; i<=nameList.length; i++) {
+		let row = i;
+		let actualRow = 2*row - 2;
+		let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
+		name.innerHTML = nameList[i];
+	}
+	</script>
 		<script>
 		  // Initialize Firebase
 		  var config = {

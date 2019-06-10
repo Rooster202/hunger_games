@@ -50,12 +50,13 @@
 					<tr class="first"><td></td><td>20tranb</td><td>220pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
 					<tr class="second"><td></td><td>KorbenL</td><td>88pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
 					<tr class="third"><td></td><td>test16</td><td>32pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-					<tr><td></td><td>LachlanH</td><td>13pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-					<tr><td></td><td>asdfasdfasdfasdf</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
-			</table>        
+			</table>
+			<script>
+			let list = document.getElementById("list").childNodes[2];
+			let nameList = ["Ben Tran", "Korben Lyall-Wilson", "Heath Gaydon","Lachlan Hunter","Nic Power","Dan Field"];
+			for (i=3; i<nameList.length;i++) {
+			list.appendChild(document.createTextNode("<tr><td></td><td></td><td></td><td></td><td></td></tr>"));}
+			</script>   
 			<script>
 
 				function leaderboard (i) {

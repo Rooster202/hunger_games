@@ -126,15 +126,15 @@
 	for (i=0; i<= 20; i++) {
 		let row = i+1;
 		let actualRow = 2*row - 2;
-		//let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
-		//name.innerHTML = nameList[i][0];
-		//let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
-		//points.innerHTML = nameList[i][1];
+		let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
+		name.innerHTML = nameList[i][0];
+		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
+		points.innerHTML = nameList[i][1];
 	}
 	console.log("english is aids");	
 	let userName = "Rueben Richardson";
-		let userPlacing = nameList.findIndex(userName);
-		let userPlacingStr = nameList.findIndex(userName).toString();
+		let userPlacing = nameList.indexOf(userName);
+		let userPlacingStr = nameList.indexOf(userName).toString();
 		if (userPlacing > 20) {
 				console.log("i hate english");
 				document.getElementById("list").childNodes[2].childNodes[38].childNodes[1].innerHTML = userName;

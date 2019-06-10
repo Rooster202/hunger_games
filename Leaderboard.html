@@ -122,7 +122,7 @@
       
     </script>
 <script>
-	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],["Rueben Richardson","-666"]];
+	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],"","","","","","","","","","","","","","","","","","","","",["Rueben Richardson","-666"]];
 	for (i=1; i<= 20; i++) {
 		let row = i;
 		let actualRow = 2*row - 2;
@@ -131,7 +131,27 @@
 		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
 		points.innerHTML = nameList[(i)][1];
 	}
-	//let user = "Rueben Richardson
+	
+	let user = "Rueben Richardson";
+			let userPlacingStr = nameList[userName];
+			let userPlacing = userPlacingStr.toInt()
+			if (userPlacing > 20) {
+				document.getElementById("list").childNodes[2].childNodes[38].childNodes[1].innerHTML = userName;
+				function positionSuffix (placing) {
+					 	let positionSuffix = placing[placing.length-1];
+					 	let positionSuffixTwo = placing[placing.length-2];
+					 	if (positionSuffixTwo == 1) {suffix = "th"}
+					 	else if (positionSuffix == 1) {suffix = "st";}
+           	else if (positionSuffix == 2) {suffix = "nd";}
+           	else if (positionSuffix == 3) {suffix = "rd";}
+					 	else {suffix = "th";}
+						 return suffix;	
+							 
+				}
+					
+					let newSuffix = positionSuffix (userPlacingStr);
+					document.getElementById("list").childNodes[2].childNodes[38].childNodes[0].innerHTML = userPlacing + "<sup>" + newSuffix + "</sup>";
+	
 	</script>
 	<script>
 		<script>

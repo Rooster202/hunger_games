@@ -136,8 +136,10 @@
 	}
 	console.log("english is aids");	
 	let userName = "Rueben Richardson";
-		let userPlacing = nameList.indexOf(userName);
-		let userPlacingStr = nameList.indexOf(userName).toString();
+		expandedNameList = nameList.flat();
+		let userPlacing = ((expandedNameList.indexOf(userName))/2) + 1;
+		let userPlacingStr = (((expandedNameList.indexOf(userName))/2)+1).toString();
+		console.log(expandedNameList);
 		console.log(userPlacing);
 		console.log(userPlacingStr);
 		if (userPlacing > 20) {

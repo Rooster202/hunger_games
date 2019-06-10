@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head></head>
+<body>
+    <header class="header">
+		<title>MBBC Hunger Games</title>
+		<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+        <link type="text/css" href="Leaderboard.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <ul class="container" style="text-decoration: none;">
+            <li id="home"><a href="test.html" style="text-decoration: none;">Home</a></li>
+            <li id="rules"><a href=""style="text-decoration: none;">Rules</a></li>
+            <li id="leaderboard"><a href="Leaderboard.html"style="text-decoration: none;">Leaderboard</a></li>
+            <li id="account"><a href=""style="text-decoration: none;">Account</a></li>
+            <li id="login"><a href=""style="text-decoration: none;">Login</a></li>
+            <li id="signup"><a href=""style="text-decoration: none;">Sign Up</a></li>
+                  </div>
+            </li>
+				</ul>
+				<script>
+					var screenWidth = screen.width;
+					var screenHeight = screen.height;
+					var width = window.outerWidth;
+					var height = window.outerHeight;
+					var widthRatio = width / screenWidth;
+					var heightRatio = height / screenHeight;
+					
+					console.log("width ratio: " + widthRatio);
+					console.log("height ratio: " + heightRatio);
+					var usableHeight = window.innerHeight / screen.height;
+					console.log("usable height: " + usableHeight);
+					console.log("window width: " + window.outerWidth);
+					console.log("screen width: " + screenWidth);
+					console.log("screen height: " + screenHeight);
+				</script>
+	</header>
+	<br>
+        <h1 class="w3-animate-fading pageTitle" id="pageTitle">MBBC <br>  Hunger Games</h1>
+				<h1 class="pageTitleOverlay" id="pageTitleOverlay">MBBC <br> Hunger Games</h1>
+				<br>
+				<p style="padding: 0px 10px;" class="summary">Welcome to the Hunger Games Leaderboard! Keep checking to see if you make it to the top 10.</p>
+				<table class="list" id="list">
+					<col class="rank"/>
+					<col class="name"/>
+					<col class="points"/>
+					<col class="kills"/>
+					<col class="rounds"/>
+					<tr class="first"><td></td><td>20tranb</td><td>220pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr class="second"><td></td><td>KorbenL</td><td>88pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr class="third"><td></td><td>test16</td><td>32pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr><td></td><td>LachlanH</td><td>13pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr><td></td><td>asdfasdfasdfasdf</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+					<tr><td></td><td>Heath Gaydon</td><td>0pts</td><td>Kills:</td><td>Rounds Survived:</td></tr>
+			</table>        
+			<script>
+
+				function leaderboard (i) {
+				let row = i;
+				let actualRow = 2 * row - 2;
+				let placing = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[0];
+				console.log(placing);
+				console.log(placing.innerHTML);
+				let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
+				console.log(name);
+				console.log(name.innerHTML);
+				let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
+				console.log(points);
+				console.log(points.innerHTML);
+				
+				function positionSuffix (row) {
+					 let suffix;
+					 let position = (row).toString();
+					 let positionSuffix = position[position.length-1];
+					 let positionSuffixTwo = position[position.length-2];
+					 if (positionSuffixTwo == 1) {suffix = "th"}
+					 else if (positionSuffix == 1) {suffix = "st";}
+           else if (positionSuffix == 2) {suffix = "nd";}
+           else if (positionSuffix == 3) {suffix = "rd";}
+					 else {suffix = "th";}
+					 return suffix;	
+				}
+				let newSuffix = positionSuffix (row);
+				placing.innerHTML = row + "<sup>" + newSuffix + "</sup>";
+
+				function pointsList () {
+
+				}
+
+			}
+			for (i=1; i<=25; i++) {
+				leaderboard(i);
+			}
+			</script>
+			<script>
+			function center (i) {
+					let row = i;
+					let actualRow = 2* row - 2;
+					let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
+					name.className = "center";
+					let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
+				  points.className = "right";
+				}
+				for (i=1; i<=25; i++) {
+					center(i);
+				}
+
+
+        /*var table = document.getElementById("list");
+        var tableChildren = table.childElementCount;
+        function scoreboard (i) {
+            let suffix;
+            var position = (i+1).toString();
+            var positionSuffix = position[position.length-1];
+            //var twoSuffix = position.slice(-2);
+            console.log(position);
+            console.log(positionSuffix);
+            //console.log(twoSuffix);
+            //if (10 < twoSuffix < 14) {suffix = "th";}
+            if (positionSuffix == 1) {suffix = "st";}
+            else if (positionSuffix == 2) {suffix = "nd";}
+            else if (positionSuffix == 3) {suffix = "rd";}
+            else {suffix = "th";}
+						console.log(suffix); 
+						var row = document.getElementById("list").childNodes[i+2].firstChild.childNodes[0];
+						console.log(row.innerHTML);
+            //console.log("row: " + row);
+            //console.log(row.innerHTML);
+            pos = i + 1;
+						row.innerHTML = pos + "<sup>" + suffix + "</sup>";
+						//console.log(row.innerHTML + " row: " + row)
+						console.log("finished");
+				}
+				//scoreboard(0);
+				//scoreboard(1);*/
+    </script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyCTmZUb-Db9Gcb-wOIsyiRiqI5siJ_uDIM",
+			authDomain: "hungergames-2bdd0.firebaseapp.com",
+			databaseURL: "https://hungergames-2bdd0.firebaseio.com",
+			projectId: "hungergames-2bdd0",
+			storageBucket: "hungergames-2bdd0.appspot.com",
+			messagingSenderId: "658652918297"
+		  };
+		  firebase.initializeApp(config);
+		  const db = firebase.firestore();
+		</script>
+        <script src="./javascript/mbbc_hg.js"></script>
+    </body>
+        <footer class="nav">
+								<h5>Made by <a href="./index.html" target="_blank">Reuben Richardson</a>, Heath Gaydon, <a href="https://nebrok.github.io/" target="_blank">Korben Lyall Wilson</a> and Lachlan Hunter.</h5>
+								<h5>Styling by <a href="">Benjamin Tran.</a></h5>
+								<h5 id="copyright"></h5>
+								<script>document.getElementById("copyright").innerHTML = "Copyright 2019 by " + window.location.pathname;</script>
+								<h5>Image References: The Hunger Games [Image]. Retrieved from https://wall.alphacoders.com/big.php?i=464128.</h5>
+								<h5>Inspired by Suzanne Collin's <em>The Hunger Games</em>.</div></h5>
+								<div class="left">
+									<h5>Submit a Query to: 20richar@mbbc.qld.edu.au</h5>
+									<img class="hglogo" src="hunger-games-trilogy-books-covers copy.png">
+									<img class="mbbclogo" src="photo_4950_1364168450 copy.png">
+								</div>
+        <br><br>
+        </footer>
+</html>

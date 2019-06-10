@@ -74,14 +74,14 @@
 				let row = i;
 				let actualRow = 2 * row - 2;
 				let placing = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[0];
-				console.log(placing);
-				console.log(placing.innerHTML);
+				//console.log(placing);
+				//console.log(placing.innerHTML);
 				let name = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[1];
-				console.log(name);
-				console.log(name.innerHTML);
+				//console.log(name);
+				//console.log(name.innerHTML);
 				let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
-				console.log(points);
-				console.log(points.innerHTML);
+				//console.log(points);
+				//console.log(points.innerHTML);
 				
 				function positionSuffix (row) {
 					 let suffix;
@@ -131,8 +131,7 @@
 		let points = document.getElementById("list").childNodes[2].childNodes[actualRow].childNodes[2];
 		points.innerHTML = nameList[i][1];
 	}
-</script><script>
-	let nameList = [["Ben Tran","220"], ["Korben Lyall-Wilson","80"], ["Heath Gaydon","32"],["Lachlan Hunter","32"],["Nic Power","0"],["Dan Field","0"],"","","","","","","","","","","","","","","","","","","","",["Rueben Richardson","-666"]];
+	console.log("english is aids");	
 	let user = "Rueben Richardson";
 		let userPlacingStr = nameList[userName];
 		let userPlacing = userPlacingStr.toInt()

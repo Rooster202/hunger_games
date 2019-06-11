@@ -170,7 +170,7 @@ function renderLeaderboard(){
 }
 
 function deleteLeaderboard() {
-	let childCount = document.getElementById("list").childElementCount;
+	//let childCount = document.getElementById("list").childElementCount;
 	console.log(document.getElementById("list");
 	console.log(childCount);
 	console.log(document.getElementById("list").childNodes[1]);

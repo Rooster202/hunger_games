@@ -170,16 +170,15 @@ function renderLeaderboard(){
 }
 
 function deleteLeaderboard() {
-	//let childCount = document.getElementById("list").childElementCount;
-	console.log(document.getElementById("list"));
-	//console.log(childCount);
-	console.log(document.getElementById("list").childNodes[1]);
-	
-	//for (i = (childCount - 1); i>=3; i--) {
-	//	let newNode = document.getElementById("list").childNodes[i];
-	//	newNode.remove();
-	//	console.log("fluid sexuality");
-	//}
+	let childCount = (document.getElementById("list").childNodes[2].childElementCount)/2;
+	console.log(childCount);
+		
+	for (i = (childCount - 1); i>=3; i--) {
+		let newVar = i * 2 - 1;
+		let newNode = document.getElementById("list").childNodes[2].childNodes[newVar].;
+		newNode.remove();
+		console.log("fluid sexuality");
+	}
 }
 	deleteLeaderboard();
 

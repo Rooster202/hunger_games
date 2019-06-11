@@ -175,7 +175,7 @@ function deleteLeaderboard() {
 		
 	for (i = (childCount - 1); i>=3; i--) {
 		let newVar = i * 2 - 1;
-		let newNode = document.getElementById("list").childNodes[2].childNodes[newVar].;
+		let newNode = document.getElementById("list").childNodes[2].childNodes[newVar];
 		newNode.remove();
 		console.log("fluid sexuality");
 	}

@@ -180,6 +180,7 @@ function deleteLeaderboard() {
 		newNode.remove();
 		console.log("fluid sexuality");
 	}}
+	deleteLeaderboard();
 
 //Data deletion tool
 /*

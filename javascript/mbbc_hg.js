@@ -169,7 +169,12 @@ function renderLeaderboard(){
 	})
 }
 
-
+function deleteLeaderboard() {
+	let childCount = document.getElementById("list").childNodes[2].childElementCount;
+	for (i = (childCount - 1); i>=3; i--) {
+		let newNode = document.getElementById("list").chilNodes[2].childNodes[i];
+		newNode.remove();
+	}}
 
 //Data deletion tool
 /*

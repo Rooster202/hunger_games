@@ -60,7 +60,7 @@ html {
     font-size: 16px;
 }
 .header {
-    background-color: rgba(190,150,150,0.7);
+    background-color: rgba(0,0,0,0.7);
     height: 50px;
     max-height: 50px;
     min-height: 50px;

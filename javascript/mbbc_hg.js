@@ -175,11 +175,12 @@ function deleteLeaderboard() {
 	//console.log(childCount);
 	console.log(document.getElementById("list").childNodes[1]);
 	
-	for (i = (childCount - 1); i>=3; i--) {
-		let newNode = document.getElementById("list").childNodes[i];
-		newNode.remove();
-		console.log("fluid sexuality");
-	}}
+	//for (i = (childCount - 1); i>=3; i--) {
+	//	let newNode = document.getElementById("list").childNodes[i];
+	//	newNode.remove();
+	//	console.log("fluid sexuality");
+	//}
+}
 	deleteLeaderboard();
 
 //Data deletion tool

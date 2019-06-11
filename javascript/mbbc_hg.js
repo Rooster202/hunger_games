@@ -173,7 +173,7 @@ function deleteLeaderboard() {
 	let childCount = document.getElementById("list").childElementCount;
 	
 	console.log(childCount);
-	console.log(document.getElementById("list").childNodes[1];
+	console.log(document.getElementById("list").childNodes[1]);
 	
 	for (i = (childCount - 1); i>=3; i--) {
 		let newNode = document.getElementById("list").childNodes[i];

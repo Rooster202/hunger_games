@@ -12,9 +12,9 @@
 }
 @font-face {
     font-family: 'Trajan Pro';
-    src: url(./TrajanPro-Regular.otf) format('truetype');
-    src: url(./TrajanPro-Regular.otf) format('woff');
-    src: url(./TrajanPro-Regular.otf) format('woff2');
+    src: url(../TrajanPro-Regular.otf) format('truetype');
+    src: url(../TrajanPro-Regular.otf) format('woff');
+    src: url(../TrajanPro-Regular.otf) format('woff2');
 }
 html {
     background-color:  rgba(226, 173, 75,1);

@@ -5,13 +5,13 @@
     src: url(../.vscode/Windlass.ttf) format('woff2');
 }
 @font-face {
-    font-family: "Trajan Pro Bold";
+    font-family: Trajan Pro Bold;
     src: url(../TrajanPro-Bold.otf) format('truetype');
     src: url(../TrajanPro-Bold.otf) format('woff');
     src: url(../TrajanPro-Bold.otf) format('woff2');
 }
 @font-face {
-    font-family: "Trajan Pro";
+    font-family: Trajan Pro;
     src: url(../TrajanPro-Regular.otf) format('truetype');
     src: url(../TrajanPro-Regular.otf) format('woff');
     src: url(../TrajanPro-Regular.otf) format('woff2');

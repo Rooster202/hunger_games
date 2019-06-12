@@ -11,10 +11,10 @@
     src: url(../TrajanPro-Bold.otf) format('woff2');
 }
 @font-face {
-    font-family: "Trajan Pro";
-    src: url(../TrajanPro-Regular.otf) format('truetype');
-    src: url(../TrajanPro-Regular.otf) format('woff');
-    src: url(../TrajanPro-Regular.otf) format('woff2');
+    font-family: 'Trajan Pro';
+    src: url(./TrajanPro-Regular.otf) format('truetype');
+    src: url(./TrajanPro-Regular.otf) format('woff');
+    src: url(./TrajanPro-Regular.otf) format('woff2');
 }
 html {
     background-color:  rgba(226, 173, 75,1);
@@ -161,7 +161,7 @@ html {
     right: -5%;
     top: 50px;
     color: rgb(255, 94, 0);
-    font-family: "Trajan Pro", 'Times New Roman', serif;
+    font-family: 'Trajan Pro', 'Times New Roman', serif;
     font-weight: bold;
     font-size: 60px;
     z-index: 1;

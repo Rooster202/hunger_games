@@ -9,7 +9,6 @@
     src: url(../TrajanPro-Bold.otf) format('truetype');
     src: url(../TrajanPro-Bold.otf) format('woff');
     src: url(../TrajanPro-Bold.otf) format('woff2');
-    src: url(../TrajanPro-Bold.otf) format('embedded-opentype');
 	font-weight: bold;
 }
 @font-face {
@@ -17,7 +16,6 @@
     src: url(../TrajanPro-Regular.otf) format('truetype');
     src: url(../TrajanPro-Regular.otf) format('woff');
     src: url(../TrajanPro-Regular.otf) format('woff2');
-    src: url(../TrajanPro-Regulare.otf) format('embedded-opentype');
 }
 html {
     background-color:  rgba(226, 173, 75,1);
